@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homekFragment">
+
+    <fragment
+        android:id="@+id/homekFragment"
+        android:name="com.example.noteapp.Ui.Fragment.HomekFragment"
+        android:label="fragment_homek"
+        tools:layout="@layout/fragment_homek" >
+        <action
+            android:id="@+id/action_homekFragment_to_createNotesFragment"
+            app:destination="@id/createNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editeNotesFragment"
+        android:name="com.example.noteapp.Ui.Fragment.EditeNotesFragment"
+        android:label="fragment_edite_notes"
+        tools:layout="@layout/fragment_edite_notes" >
+        <action
+            android:id="@+id/action_editeNotesFragment_to_homekFragment"
+            app:destination="@id/homekFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNotesFragment"
+        android:name="com.example.noteapp.Ui.Fragment.CreateNotesFragment"
+        android:label="fragment_create_notes"
+        tools:layout="@layout/fragment_create_notes" >
+        <action
+            android:id="@+id/action_createNotesFragment_to_homekFragment"
+            app:destination="@id/homekFragment" />
+    </fragment>
+</navigation>
